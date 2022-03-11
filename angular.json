@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "treinamento-angular": {
+    "e-commerce-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/treinamento-angular",
+            "outputPath": "dist/e-commerce-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "treinamento-angular:build"
+            "browserTarget": "e-commerce-web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "treinamento-angular:build:production"
+              "browserTarget": "e-commerce-web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "treinamento-angular:build"
+            "browserTarget": "e-commerce-web:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
       }
     }
   },
-  "defaultProject": "treinamento-angular",
+  "defaultProject": "e-commerce-web",
   "cli": {
     "analytics": "a2d8d63b-6d60-4a31-a4a0-ae9cd6449ec5"
   }
