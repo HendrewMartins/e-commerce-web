@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: `https://damp-tor-97294.herokuapp.com/`
+  api: `https://fino-sabor-api.herokuapp.com/`
 };
