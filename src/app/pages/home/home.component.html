@@ -1,0 +1,18 @@
+<div class="home-bar mat-elevation-z6">
+    <div class="acao" fxLayout="row" fxLayoutAlign="end center">
+        <div fxFlex fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px" class="titulo">
+            <mat-icon>shopping_cart</mat-icon>
+            <span>E-commerce</span>
+        </div>
+        <button [routerLink]="['/login']" mat-raised-button>Login</button>
+    </div>
+    <!-- Nome -->
+    <div class="pesquisa">
+        <input class="mat-elevation-z2" placeholder="O que você procura?" type="search"
+            (keyup)="filtrarProdutos($event)" [(ngModel)]="valorInput" [ngModelOptions]="{standalone: true}">
+    </div>
+</div>
+
+<div class="produtos">
+    <app-produto [produto]="item" *ngFor="let item of listaProdutos"></app-produto>
+</div>
