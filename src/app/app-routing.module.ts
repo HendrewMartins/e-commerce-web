@@ -10,15 +10,15 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
- // { path: 'cadastro', component: CadastroComponent },
   { path: 'home', component: HomeComponent },
   {
     path: 'admin', component: AdminComponent,
     canActivate: [AdminGuard],
     children: [
 
-      { path: 'empresa', loadChildren: () => import('./modules/cadastros/empresa/empresa.module').then(m => m.EmpresaModule) },
       { path: 'produto', loadChildren: () => import('./modules/cadastros/produto/produto.module').then(m => m.ProdutoModule) },
+      { path: 'unidade-medida', loadChildren: () => import('./modules/cadastros/unidade-medida/unidade-medida.module').then(m => m.UnidadeMedidaModule) },
+      { path: 'material', loadChildren: () => import('./modules/cadastros/materiais/materiais.module').then(m => m.MateriaisModule) },
     ]
   }
 ];

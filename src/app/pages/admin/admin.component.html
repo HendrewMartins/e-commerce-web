@@ -18,15 +18,21 @@
         <mat-drawer [opened]="true" mode="side" class="menu" #drawer>
             <mat-nav-list>
                 <mat-list-item>
-                    <a matLine class="link" [routerLink]="['/admin/empresa']" routerLinkActive="link-activated">
-                        <mat-icon>account_balance</mat-icon>
-                        <span>Empresa</span>
+                    <a matLine class="link" [routerLink]="['/admin/material']" routerLinkActive="link-activated">
+                        <mat-icon>flatware</mat-icon>
+                        <span>Material</span>
                     </a>
                 </mat-list-item>
                 <mat-list-item>
                     <a matLine class="link" [routerLink]="['/admin/produto']" routerLinkActive="link-activated">
-                        <mat-icon>flatware</mat-icon>
+                        <mat-icon>restaurant_menu</mat-icon>
                         <span>Produto</span>
+                    </a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a matLine class="link" [routerLink]="['/admin/unidade-medida']" routerLinkActive="link-activated">
+                        <mat-icon>waterfall_chart</mat-icon>
+                        <span>Unidade de Medida</span>
                     </a>
                 </mat-list-item>
             </mat-nav-list>

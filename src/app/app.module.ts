@@ -16,6 +16,7 @@ import { HttpInterceptadorService } from './services/http-interceptador.service'
 import { AuthService } from './services/auth.service';
 import { HomeComponent } from './pages/home/home.component';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { UnidadeMedidaModule } from './modules/cadastros/unidade-medida/unidade-medida.module';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ProdutoComponent } from './components/produto/produto.component';
     ReactiveFormsModule,
     HttpClientModule,
     FlexLayoutModule,
-    FormularioModule
+    FormularioModule,
+    UnidadeMedidaModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptadorService, multi: true, deps: [AuthService] },

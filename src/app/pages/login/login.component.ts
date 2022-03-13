@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
   ) { }
 
   public form: FormGroup = new FormGroup({
@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   });
 
   ngOnInit() {
+      this.auth.verificaToken();
   }
 
   public login() {

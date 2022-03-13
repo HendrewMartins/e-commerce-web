@@ -11,7 +11,7 @@ export class PesquisaResolveService implements Resolve<any[]> {
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any[] | Observable<any[]> | Promise<any[]> {
         const api = `${environment.api}/api/${route.data.pathApi}`;
-        return this.http.get<any[]>(api).pipe(map((item: any) => item.data));
+        return this.http.get<any[]>(api).pipe(map((item: any) => item));
     }
 
 }

@@ -1,0 +1,41 @@
+'<form [formGroup]="form" #fr="ngForm">
+
+    <app-crud [form]="fr" titulo="Material" [api]="service">
+        <div fxLayout="column" fxLayoutGap="8px">
+
+            <div fxLayout="row" fxLayoutGap="16px">
+                <mat-form-field fxFlex [appearance]="'outline'">
+                    <mat-label>Descrição</mat-label>
+                    <input matInput type="text" formControlName="descricao">
+                    <mat-error>{{descricao!.errors | erro}}</mat-error>
+                </mat-form-field>
+
+                <mat-form-field [appearance]="'outline'">
+                    <mat-label>Preço</mat-label>
+                    <input matInput type="number" formControlName="valor" step="0.01">
+                    <mat-error>{{valor!.errors | erro}}</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutGap="16px">
+
+                <mat-form-field [appearance]="'outline'">
+                    <mat-label>Quantidade</mat-label>
+                    <input matInput type="number" formControlName="quantidade" step="0.01">
+                    <mat-error>{{quantidade!.errors | erro}}</mat-error>
+                </mat-form-field>
+
+                <mat-form-field [appearance]="'outline'">
+                    <mat-label>Unid. de Medida</mat-label>
+                    <input (keyup)="buscarUnidade($event)" type="text" matInput [formControl]="unidadeMedida" [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                        <mat-option *ngFor="let option of listUnidadeMedida | async" [value]="option">
+                            {{option.id}} - {{option.descricao}} - {{option.sigla}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <mat-error>{{unidadeMedida!.errors | erro}}</mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+    </app-crud>
+</form>

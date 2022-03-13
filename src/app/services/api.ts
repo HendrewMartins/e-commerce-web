@@ -16,19 +16,19 @@ export class Api<T> {
 
     public criar(obj: T): Observable<T> {
         return this.http.post<T>(this.url, obj).pipe(map((item: any) => {
-            return item.data;
+            return item;
         }));
     }
 
     public ler(id: number): Observable<T> {
         return this.http.get<T>(this.url + '/' + id).pipe(map((item: any) => {
-            return item.data;
+            return item;
         }));
     }
 
     public alterar(obj: T, id: number): Observable<T> {
         return this.http.put<T>(`${this.url}/${id}`, obj).pipe(map((item: any) => {
-            return item.data;
+            return item;
         }));
     }
 

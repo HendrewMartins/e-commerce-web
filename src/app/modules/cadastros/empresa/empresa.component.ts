@@ -10,7 +10,7 @@ import { EmpresaService } from 'src/app/services/empresa.service';
 })
 export class EmpresaComponent {
 
-  public form: FormGroup;
+  public form!: FormGroup;
 
   constructor(
     private fb: FormBuilder,

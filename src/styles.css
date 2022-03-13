@@ -32,7 +32,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .auth-container{
     height: 100%;
-    background-color: #3f51b5;
+    background-color: #7b1fa2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,3 +60,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-menu-item {
     align-items: center;
 }
+
+.mat-toolbar.mat-primary {
+    background: #7b1fa2;
+    color: #fff;
+}
+
+.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+    color: #fff;
+    background-color: #424242;
+}
+
+

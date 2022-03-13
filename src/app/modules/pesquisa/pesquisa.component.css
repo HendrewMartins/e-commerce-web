@@ -3,6 +3,8 @@ table {
     height: 200px;
     margin-top: 16px;
     margin-bottom: 32px;
+    border-spacing: 0;
+    height: 10%;
 }
 
 .criar {
@@ -10,4 +12,9 @@ table {
     bottom: 16px;
     right: 16px;
     z-index: 10;
+}
+
+.table.mat-table {
+    border-spacing: 0;
+    height: 10%;
 }
