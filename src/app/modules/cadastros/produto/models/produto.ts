@@ -1,7 +1,12 @@
+import { Materiais } from "../../materiais/models/materiais";
+import { ProdutoSabores } from "./produto-sabores";
+
 export interface Produto {
+    id?: number;
     nome?: string;
-    marca?: string;
-    codigoBarra?: string;
-    preco?: number;
+    precoVenda?: number;
+    custoProduto?: number;
     imagem?: string;
+    //sabor?: ProdutoSabores[];
+    //material?: Materiais[];
 }

@@ -8,7 +8,7 @@ import { AuthService } from './auth.service';
 export class AdminGuard implements CanActivate {
 
   // tslint:disable-next-line: variable-name
-  private _url: string;
+  private _url!: string;
 
   constructor(
     private auth: AuthService,

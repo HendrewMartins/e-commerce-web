@@ -13,21 +13,28 @@ import { environment } from 'src/environments/environment';
 
 export class ProdutoComponent implements OnInit {
 
-    @Input() public produto: Produto;
+    @Input() public produto!: Produto;
     public url: string;
 
     constructor(
         public http: HttpClient,
     ) {
-        this.url = environment.api + '/api/produto/pesquisar?value=';
+        this.url = environment.api + '/api/produto';
     }
 
     ngOnInit() { }
 
     public buscarTodos(valor: string): Observable<Produto[]> {
-        return this.http.get<Produto[]>(this.url + valor).pipe(map((item: Produto[]) => {
-            return item;
-        }));
+        if (valor === '') {
+            return this.http.get<Produto[]>(this.url+'/buscar-todos').pipe(map((item: Produto[]) => {
+                return item;
+            }));
+        }
+        else {
+            return this.http.get<Produto[]>(this.url + '/pesquisar/' + valor).pipe(map((item: Produto[]) => {
+                return item;
+            }));
+        }
     }
 
 }

@@ -11,16 +11,8 @@ export const PESQUISA_PRODUTO_CONFIG: PesquisaConfig = {
             nome: 'nome'
         },
         {
-            label: 'Marca',
-            nome: 'marca'
-        },
-        {
-            label: 'Código de Barras',
-            nome: 'codigoBarra'
-        },
-        {
-            label: 'Preço',
-            nome: 'preco'
+            label: 'Preço de Venda',
+            nome: 'precoVenda'
         },
     ],
     pathApi: 'produto'

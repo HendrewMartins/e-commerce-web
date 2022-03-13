@@ -17,7 +17,7 @@ export class AuthService {
     private http: HttpClient,
     private router: Router
   ) {
-    this.token = localStorage.getItem('acess_token')!;
+    //this.token = localStorage.getItem('acess_token')!;
   }
 
 
@@ -25,7 +25,7 @@ export class AuthService {
     const api = environment.api + `/api/user/auth`;
     return this.http.post(api, login).pipe(map((resposta: any) => {
       this.token = resposta.token;
-      localStorage.setItem('acess_token', this.token);
+     // localStorage.setItem('acess_token', this.token);
       return resposta;
     }));
   }
@@ -36,7 +36,7 @@ export class AuthService {
   }
 
   public sair() {
-    localStorage.removeItem('acess_token');
+    //localStorage.removeItem('acess_token');
     this.router.navigateByUrl('home');
     this.token = null;
   }
@@ -44,7 +44,7 @@ export class AuthService {
   public verificaToken(){
     if(localStorage.getItem('acess_token') === undefined){
     }else{
-      localStorage.removeItem('acess_token');
+     // localStorage.removeItem('acess_token');
       this.token = null;
     }
   }
